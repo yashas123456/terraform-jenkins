@@ -17,12 +17,12 @@ pipeline {
         }
         stage('copy files') {
             steps {
-                sh 'cd terraform-jenkins/ && terraform init'
+                sh 'cd terraform-jenkins/'
             }
         }
         stage('terraform init') {
             steps {
-                sh 'terraform plan'
+                sh 'ls'
             }
         }
         stage('terraform apply') {
