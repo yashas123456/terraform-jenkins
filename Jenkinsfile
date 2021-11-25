@@ -17,7 +17,7 @@ pipeline {
         }
         stage('copy files') {
             steps {
-                sh 'cd terraform-jenkins'
+                sh 'cd terraform-jenkins/'
             }
         }
         stage('terraform init') {
