@@ -17,7 +17,7 @@ pipeline {
         }
         stage('copy files') {
             steps {
-                sh 'cd terraform-jenkins/ && ls'
+                sh 'cd terraform-jenkins/ && chmod 777 *'
             }
         }
         stage('terraform init') {
