@@ -17,7 +17,7 @@ pipeline {
         }
         stage('copy files') {
             steps {
-                sh 'cp /home/ec2-user/jenkins-terraform/* ./jenkins'
+                sh 'sudo cp /home/ec2-user/jenkins-terraform/* ./jenkins'
             }
         }
         stage('terraform init') {
