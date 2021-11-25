@@ -17,7 +17,7 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'terraform init'
+                sh 'cd /home/ec2-user && terraform init'
             }
         }
         stage('terraform apply') {
