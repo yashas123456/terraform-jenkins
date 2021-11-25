@@ -15,9 +15,14 @@ pipeline {
                 sh 'rm -rf terraform-jenkins && git clone https://github.com/yashas123456/terraform-jenkins'
             }
         }
+        stage('copy files') {
+            steps {
+                sh 'cp -R /home/ec2-user/jenkins-terraform/* ./jenkins'
+            }
+        }
         stage('terraform init') {
             steps {
-                sh 'cd /home/ec2-user && terraform init'
+                sh 'terraform init'
             }
         }
         stage('terraform apply') {
