@@ -22,7 +22,7 @@ pipeline {
         }
         stage('permission') {
             steps {
-                sh 'chmod -R g+rwx *'
+                sh 'chmod -R 777 *'
             }
         }   
         stage('terraform init') {
