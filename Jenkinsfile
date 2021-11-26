@@ -12,7 +12,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'rm -rf /var/lib/jenkins/workspace/terraform/terraform-jenkins && git clone https://github.com/yashas123456/terraform-jenkins'
+                sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins && git clone https://github.com/yashas123456/terraform-jenkins'
             }
         }
         stage('copy files') {
