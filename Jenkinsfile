@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('terraform start') {
             steps {
-                sh 'echo "started...." '
+                sh 'rm -rf /var/lib/jenkins/workspace/terraform/terraform-jenkins'
             }
         }
         stage('git clone') {
             steps {
-                sh 'git pull https://github.com/yashas123456/terraform-jenkins'
+                sh 'git clone https://github.com/yashas123456/terraform-jenkins'
             }
         } 
         stage('check files') {
