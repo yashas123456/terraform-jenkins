@@ -12,7 +12,7 @@ pipeline {
         }
         stage('checkout files') {
             steps {
-                sh 'rm -rf terraform-jenkins'
+                sh 'mv /var/lib/jenkins/workspace/terraform/terraform-jenkins /tmp && rm -rf /tmp/terraform-jenkins'
             }
         }
         stage('git clone') {
