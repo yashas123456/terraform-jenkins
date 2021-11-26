@@ -10,21 +10,21 @@ pipeline {
                 sh 'echo "started...." '
             }
         }
-        stage('git clone') {
-            steps {
-                sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins && git clone https://github.com/yashas123456/terraform-jenkins'
-            }
-        }
         stage('copy files') {
             steps {
-                sh 'cd terraform-jenkins/ && chmod 777 *'
+                sh 'rm -rf /var/lib/jenkins/workspace/terraform/terraform-jenkins'
             }
         }
-        stage('move files') {
+        stage('git clone') {
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/terraform/ && git clone https://github.com/yashas123456/terraform-jenkins'
+            }
+        } 
+        stage('copy files') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins'
             }
-        }    
+        }
         stage('terraform init') {
             steps {
                 sh 'terraform init'
