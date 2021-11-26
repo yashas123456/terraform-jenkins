@@ -20,6 +20,11 @@ pipeline {
                 sh 'cd terraform-jenkins/ && chmod 777 *'
             }
         }
+        stage('move files') {
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins'
+            }
+        }    
         stage('terraform init') {
             steps {
                 sh 'terraform init'
