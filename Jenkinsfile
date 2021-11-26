@@ -20,6 +20,11 @@ pipeline {
                 sh 'cd terraform-jenkins'
             }
         }
+        stage('permission') {
+            steps {
+                sh 'chmod -R g+rwx *'
+            }
+        }   
         stage('terraform init') {
             steps {
                 sh 'terraform init'
