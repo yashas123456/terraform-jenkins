@@ -20,7 +20,7 @@ pipeline {
                 sh 'cd /var/lib/jenkins/workspace/terraform/ && git clone https://github.com/yashas123456/terraform-jenkins'
             }
         } 
-        stage('copy files') {
+        stage('check files') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins'
             }
