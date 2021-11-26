@@ -10,14 +10,9 @@ pipeline {
                 sh 'echo "started...." '
             }
         }
-        stage('existing files') {
-            steps {
-                sh 'cd /var/lib/jenkins/workspace/terraform/ && chown -R jenkins:jenkins terraform-jenkins'
-            }
-        }
         stage('checkout files') {
             steps {
-                sh 'rm -rf /var/lib/jenkins/workspace/terraform/terraform-jenkins'
+                sh 'rm -rf terraform-jenkins'
             }
         }
         stage('git clone') {
