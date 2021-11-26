@@ -24,10 +24,14 @@ pipeline {
 //             steps {
 //                 sh 'chmod -R 777 *'
 //             }
-//         }   
-        stage('terraform init') {
+//         }
+        stage('terraform') {
             steps {
                 sh 'terraform get --update=true'
+            }
+        }
+        stage('terraform init') {
+            steps {
                 sh 'terraform init'
             }
         }
