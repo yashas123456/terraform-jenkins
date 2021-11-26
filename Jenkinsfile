@@ -12,7 +12,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'git clone https://github.com/yashas123456/terraform-jenkins'
+                sh 'git pull https://github.com/yashas123456/terraform-jenkins'
             }
         } 
         stage('check files') {
