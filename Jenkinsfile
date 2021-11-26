@@ -10,7 +10,12 @@ pipeline {
                 sh 'echo "started...." '
             }
         }
-        stage('copy files') {
+        stage('existing files') {
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/terraform/ && chown -R jenkins:jenkins terraform-jenkins'
+            }
+        }
+        stage('checkout files') {
             steps {
                 sh 'rm -rf /var/lib/jenkins/workspace/terraform/terraform-jenkins'
             }
