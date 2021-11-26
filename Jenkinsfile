@@ -12,12 +12,12 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'cd /var/lib/jenkins/workspace/terraform/ && git clone https://github.com/yashas123456/terraform-jenkins'
+                sh 'cd /home/ubuntu/ && git clone https://github.com/yashas123456/terraform-jenkins'
             }
         } 
         stage('check files') {
             steps {
-                sh 'cd /var/lib/jenkins/workspace/terraform/terraform-jenkins'
+                sh 'cd /home/ubuntu/terraform-jenkins'
             }
         }
         stage('terraform init') {
