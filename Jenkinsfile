@@ -10,11 +10,6 @@ pipeline {
                 sh 'echo "started...." '
             }
         }
-        stage('checkout files') {
-            steps {
-                sh 'mv /var/lib/jenkins/workspace/terraform/terraform-jenkins /tmp'
-            }
-        }
         stage('git clone') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/terraform/ && git clone https://github.com/yashas123456/terraform-jenkins'
