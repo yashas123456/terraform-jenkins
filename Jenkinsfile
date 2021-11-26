@@ -17,7 +17,7 @@ pipeline {
         } 
         stage('check files') {
             steps {
-                sh 'cd /home/ubuntu/terraform-jenkins'
+                sh 'cd terraform-jenkins'
             }
         }
         stage('terraform init') {
