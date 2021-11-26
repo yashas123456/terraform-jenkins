@@ -27,6 +27,7 @@ pipeline {
         }   
         stage('terraform init') {
             steps {
+                sh 'terraform get --update=true'
                 sh 'terraform init'
             }
         }
