@@ -20,11 +20,11 @@ pipeline {
                 sh 'cd terraform-jenkins'
             }
         }
-        stage('permission') {
-            steps {
-                sh 'chmod -R 777 *'
-            }
-        }   
+//         stage('permission') {
+//             steps {
+//                 sh 'chmod -R 777 *'
+//             }
+//         }   
         stage('terraform init') {
             steps {
                 sh 'terraform get --update=true'
