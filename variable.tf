@@ -9,24 +9,24 @@ variable "virtual_network_name" {
     type = string
 }
 
-variable "vm_count" {
-    type = number
-}
-variable "network_interface_name" {
-    type = string
-}
+# variable "vm_count" {
+#     type = number
+# }
+#variable "network_interface_name" {
+    #type = string
+#}
 
 variable "network_security_group" {
     type = string
 }
 
 variable "vm_name" {
-    type = string
+    type = list(string)
 }
 
 variable "vm_size" {
-    type = string
+    type = list(string)
 }
-variable "hostname" {
-    type = string
-}
+#variable "hostname" {
+    #type = string
+#}
