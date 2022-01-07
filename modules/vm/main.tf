@@ -83,10 +83,10 @@ delete_data_disks_on_termination = true
 }
 
    storage_os_disk {
-    name              = "whatsapp-bsp-terraformtesting"
+    name              = var.vm_name
     caching           = "ReadWrite"
     create_option     = "FromImage"
-    managed_disk_type = "StandardSSD_LRS"
+    managed_disk_type = "Standard_LRS"
 }
 
    os_profile {
