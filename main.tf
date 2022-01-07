@@ -13,4 +13,3 @@ module "vm" {
     hostname            = "${var.vm_name[count.index]}"
 }
 
-
