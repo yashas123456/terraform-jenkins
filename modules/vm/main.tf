@@ -52,7 +52,7 @@ resource "azurerm_network_interface_security_group_association" "example" {
 resource "azurerm_virtual_machine" "test" {
     #count = length(var.vm_name)
     #name = "${var.vm_name[count.index]}"
-    name                  = $vm_name 
+    name                  = ${vm_name} 
     location              = "${azurerm_network_interface.test.location}"
     resource_group_name   = "${data.azurerm_resource_group.test.name}"
     network_interface_ids = ["${azurerm_network_interface.test.id}"]
@@ -83,7 +83,7 @@ delete_data_disks_on_termination = true
 }
 
    storage_os_disk {
-    name              = $vm_name
+    name              = ${vm_name}
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
