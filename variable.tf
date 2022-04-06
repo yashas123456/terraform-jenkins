@@ -20,9 +20,9 @@ variable "network_security_group" {
     type = string
 }
 
-variable "vm_name" {
-    type = list(string)
-}
+#variable "vm_name" {
+ #   type = list(string)
+#}
 
 variable "vm_size" {
     type = list(string)
