@@ -1,7 +1,7 @@
 module "vm" {
     source = "./modules/vm"
     #vm_count = 2
-    count = length("${vm_name}")
+    #count = length("${vm_name}")
     vm_name = "${"${vm_name}"[count.index]}"
     resource_group_name = var.resource_group_name
     network_subnet_name = var.network_subnet_name
