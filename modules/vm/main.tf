@@ -6,7 +6,9 @@ data "azurerm_resource_group" "test" {
 #refer to a subnet
 data "azurerm_subnet" "test" {
   name                 = var.network_subnet_name
-  virtual_network_name = var.virtual_network_name# refer to a resource group
+  virtual_network_name = var.virtual_network_name
+}
+  # refer to a resource group
 data "azurerm_resource_group" "test" {
   name = var.resource_group_name
 }
