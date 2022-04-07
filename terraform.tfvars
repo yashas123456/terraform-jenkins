@@ -9,4 +9,4 @@ vm_size            = ["Standard_F2s_v2"]
 #vm_size            = "${vm_size}"
 #hostname            = "whatsapp-bsp-terraformtesting"
 network_security_group = "Onedirect-Production-NSG"
-vm_name = "TF_VAR_vm_name"
+#vm_name = "TF_VAR_vm_name"
