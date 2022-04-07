@@ -92,7 +92,7 @@ delete_data_disks_on_termination = true
    os_profile {
     computer_name  = var.hostname
     admin_username = "subhransudas"
-    admin_password = "Incredible@123"
+    admin_password = "Incredibl@123"
   }
    os_profile_linux_config {
     disable_password_authentication = false
